@@ -1,0 +1,17 @@
+
+
+function MoneyDispenser(inquiry, withdraw){
+	let availableBal = 50000;
+	let a = inquiry(availableBal);
+	let a = withdraw(availableBal);
+
+	if(a){
+	availableBal = inquiry(availableBal);
+	}else{
+	availableBal = availableBal - withdraw;
+	if(withdraw > availableBal){
+	alert('you have insufficient funds')
+	}
+	}
+	return availableBal;
+}
